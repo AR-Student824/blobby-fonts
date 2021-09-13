@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>
+            Fonts | Blobby
+        </title>
+        <meta charset="UTF-8"/><meta property="og:type" content="website"/><meta property="twitter:card" content="summary_large_image"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta property="og:site_name" content="Blobby"/><meta property="og:title" content="Blobby Fonts"/><meta name="title" content="Blobby Fonts"/><meta property="twitter:title" content="Blobby Fonts"><meta property="og:description" content="List of high quality fonts used by Blobby, all from Google Fonts."/><meta property="twitter:description" content="List of high quality fonts used by Blobby, all from Google Fonts."><meta name="description" content="List of high quality fonts used by Blobby, all from Google Fonts."><meta name="language" content="en"/><meta name="twitter:site" content="@arcodez"/><meta property="og:url" content="https://fonts.blobby.me"/><meta property="twitter:url" content="https://fonts.blobby.me"/><meta property="language" content="EN"/><meta name="theme-color" content="#121212"/>
+        <link rel="stylesheet" href="/blobbyfonts.css" />
+        <script>
+            var fonts = [
+                {
+                    name: "DM Sans",
+                    css: "@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');",
+                    googlefonts: "https://fonts.google.com/specimen/DM+Sans",
+                    desc: "Beautiful and modern font used in FormRocket"
+                }
+            ]
+            document.getElementById('count').innerHTML = fonts.length.toString()
+            fonts.forEach(font => {
+                document.getElementById('styles').innerHTML += `\n${font.css}`
+                document.getElementById('fonts').innerHTML += `<div id="${font.name.toLowerCase().replace(/ /g, '')}" class="card">
+                    <h3 style="font-family: ${font.name};">${font.name}</h3>
+                    <p style="font-family: ${font.name};">${font.desc}</p>
+                </div>`
+            })
+        </script>
+    </head>
+    <body>
+        <main>
+            <style id="styles" />
+            <noscript>
+                <h1>We&apos;re sorry</h1>
+                <p>We require JavaScript to be enabled because of the way this site works.</p>
+            </noscript>
+            <h1>All <span id="count"><noscript>the</noscript></span> fonts used by Blobby applications.</h1>
+            <div id="fonts">
+
+            </div>
+        </main>
+    </body>
+</html>
